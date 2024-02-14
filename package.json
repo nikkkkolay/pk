@@ -17,12 +17,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://gitlab.com/ngagara/priem_bot.git"
+        "url": "git+https://github.com/nikkkkolay/pk.git"
     },
     "keywords": [],
     "bugs": {
-        "url": "https://gitlab.com/ngagara/priem_bot/issues"
+        "url": "https://github.com/nikkkolay/pk/issues"
     },
-    "homepage": "https://gitlab.com/ngagara/priem_bot#readme",
+    "homepage": "https://github.com/nikkkkolay/pk",
     "description": ""
 }
