@@ -9,20 +9,20 @@
     "license": "ISC",
     "dependencies": {
         "dotenv": "^16.4.3",
-        "node-telegram-bot-api": "^0.61.0",
-        "nodemon": "^2.0.20",
+        "node-telegram-bot-api": "^0.64.0",
+        "nodemon": "^3.0.3",
         "sqlite3": "^5.1.4",
         "string-similarity": "4.0.4",
         "telegraf": "^4.12.2"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://gitlab.com/ngagara/priem_bot.git"
+        "url": "git+https://github.com/nikkkkolay/pk.git"
     },
     "keywords": [],
     "bugs": {
-        "url": "https://gitlab.com/ngagara/priem_bot/issues"
+        "url": "https://github.com/nikkkolay/pk/issues"
     },
-    "homepage": "https://gitlab.com/ngagara/priem_bot#readme",
+    "homepage": "https://github.com/nikkkkolay/pk",
     "description": ""
 }
