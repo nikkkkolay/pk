@@ -1,8 +1,8 @@
 const{Markup} = require('telegraf');
 
-const priemUrl = "https://www.masu.edu.ru/abit/reception/";
-const timeUrl = "https://www.masu.edu.ru/abit/rules/application/"
-const otherDocUrl = "https://www.masu.edu.ru/abit/admission/apply/"
+const priemUrl = "https://mauniver.ru/abit/reception/";
+const timeUrl = "https://mauniver.ru/abit/rules/application/";
+const otherDocUrl = "https://mauniver.ru/abit/rules/application/apply/";
 
 const declarationKb = Markup.inlineKeyboard ([
   [
