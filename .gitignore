@@ -42,5 +42,3 @@ gen
 .prettierrc
 .eslintrc
 .vscode
-
-package-lock.json
