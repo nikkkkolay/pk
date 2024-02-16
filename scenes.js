@@ -1,3 +1,5 @@
+// TODO: лицензия
+// Модуль отвечает за вычисление я функции "Калькулятор ЕГЭ"
 const {Markup, Composer, Scenes, Context} = require('telegraf')
 const kb = require("./keyboard");
 const sqlite3 = require('sqlite3');
