@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon index.js"
+        "start": "nodemon index.js",
+        "lint": "eslint --fix --ext .js, ."
     },
     "author": "MASU",
     "license": "ISC",
@@ -13,6 +14,11 @@
         "sqlite3": "^5.1.7",
         "string-similarity": "4.0.4",
         "telegraf": "^4.15.3"
+    },
+    "devDependencies": {
+        "eslint": "^8.56.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.29.1"
     },
     "repository": {
         "type": "git",
