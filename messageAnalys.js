@@ -1,4 +1,3 @@
-// TODO: лицензия
 // Модуль отвечает за ответ пользователю на его запрос
 const similarity = require("string-similarity");
 const data = require("./data");

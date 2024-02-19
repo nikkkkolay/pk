@@ -1,15 +1,16 @@
-// TODO: license
 // Telegram-бот, выводящий полезную информацию через варианты меню: "Тест на профориентацию", "Полезная информация", "FAQ", "Калькулятор ЕГЭ".
-
 // Главный файл, с которого и начинается запуск бота
+
 const { Telegraf, Scenes, session } = require("telegraf");
 const kb = require("./keyboard");
 const rate = require("./messageAnalys");
 const preExamScene = require("./scenes");
 
 // Обработка токена бота. Если токена нет - кидает ошибку, завершает программу
+// Токен берется из файла `.env` в формате "BOT_TOKEN = <token>"
 require("dotenv").config();
 
+// Обработка ошибки, если не существует токена бота
 const { BOT_TOKEN } = process.env;
 if (!BOT_TOKEN) throw new Error("\"BOT_TOKEN\" env var is required!");
 const bot = new Telegraf(BOT_TOKEN);
@@ -27,7 +28,7 @@ bot.start(async (ctx) => {
 });
 
 //
-// HEARS
+// HEARS  
 //
 // Секция прсвященная вводу/выводу на запросы
 bot.hears("FAQ", async (ctx) => {
@@ -48,6 +49,7 @@ bot.hears("Тест на профориентацию", async (ctx) => {
 });
 bot.hears("Калькулятор ЕГЭ", async (ctx) => {
     // TODO: плохо работает, нужно будет сделать систему с удалением уже выбранного экзамена из списка
+    // Т.к. сейчас можно выбрать первым экзаменом "Математика" и вторым экзаменом "Математика"
     // await ctx.reply("Укажите ваши баллы за экзамен по русскому языку (только число, например: 40)");
     await ctx.scene.enter("preExamWizard");
 });
@@ -55,7 +57,7 @@ bot.hears("Калькулятор ЕГЭ", async (ctx) => {
 //
 // ACTION
 //
-// TODO: to find what it should do
+// Обработка нажатия кнопок и показываемого текста при взаимодействии с меню
 bot.action("Declaration", async (ctx) => {
     await ctx.editMessageText("Выберите уровень образования", kb.declarationKb);
 });
