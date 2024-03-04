@@ -47,6 +47,6 @@ function fetchStudyProg(exam1, exam2, exam1Score, exam2Score) {
     // let rusExamScore = NUMBER(cursor.all)
 }
 
-// Экспорт функций в другие модули 
+// Экспорт функций в другие модули
 module.exports.checkDb = checkDb;
 module.exports.fetchStudyProg = fetchStudyProg;
