@@ -28,14 +28,14 @@ bot.start(async (ctx) => {
 });
 
 //
-// HEARS  
+// HEARS
 //
 // Секция прсвященная вводу/выводу на запросы
 bot.hears("FAQ", async (ctx) => {
     // Кнопка FAQ ниже поля ввода текста
     await ctx.reply(
         "Просто напишите мне ваш вопрос и я постараюсь найти на него ответ или задайте его напрямую приемной комиссии по форме",
-        kb.formKb
+        kb.formKb,
     );
 });
 bot.hears("Полезная информация", async (ctx) => {
@@ -74,7 +74,13 @@ bot.action("Back to help", async (ctx) => {
 // С вводом текста оценивает на какой из существующих вариантов стоит предложить как автодополнение
 bot.on("message", async (ctx) => {
     const result = rate.rateAnswer(ctx.message.text);
-    await ctx.reply(result, kb.formKb);
+    await ctx.replyWithMarkdownV2(
+        // Для экранирования зарезервированных Markdown символов
+        result
+            .replace(/\-/g, "\\-")
+            .replace(/\./g, "\\."),
+        kb.formKb
+    );
 });
 
 // Запуск бота
