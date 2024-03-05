@@ -12,6 +12,11 @@ function rateAnswer(text) {
         questions.push(FAQ[i].question);
     }
 
+	// Текст который дал пользователем может быть стикером - что крашит бота
+	if (!(typeof text === 'string')) {
+		text = '';
+	}
+
     const result = similarity.findBestMatch(text, questions);
 
     if (result.bestMatch.rating >= 0.5) {
