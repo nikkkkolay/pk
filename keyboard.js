@@ -84,6 +84,29 @@ const examsKb = Markup.inlineKeyboard([
     ],
 ]);
 
+// Кнопки при вызове меню "Что ещё важно"
+const extraKb = Markup.inlineKeyboard([
+    [
+        Markup.button.webApp("Адаптация", "https://priem.mauniver.ru/adaptation/")
+    ],
+    [
+        Markup.button.webApp("Стипендия", "https://priem.mauniver.ru/scholarship/")
+    ],
+    [
+        Markup.button.webApp("Общежитие", "https://priem.mauniver.ru/hostel/")
+    ],
+    [
+        Markup.button.webApp("Карьера", "https://priem.mauniver.ru/career/")
+    ],
+    [
+        Markup.button.webApp("Военный учебный центр", "https://priem.mauniver.ru/vuc/")
+    ],
+    [
+        Markup.button.webApp("Студенческая жизнь", "https://priem.mauniver.ru/life/")
+    ],
+
+])
+
 // Кнопки ниже ввода текста
 const mainKb = Markup.keyboard([
     [
@@ -97,6 +120,9 @@ const mainKb = Markup.keyboard([
     ],
     [
         Markup.button.text("Калькулятор ЕГЭ")
+    ],
+    [
+        Markup.button.text("Что ещё важно")
     ]
 ]);
 
@@ -104,6 +130,7 @@ const mainKb = Markup.keyboard([
 module.exports.mainKb = mainKb;
 module.exports.formKb = formKb;
 module.exports.helpKb = helpKb;
+module.exports.extraKb = extraKb;
 module.exports.declarationKb = declarationKb;
 module.exports.consertKb = consertKb;
 module.exports.examsKb = examsKb;
