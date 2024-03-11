@@ -104,8 +104,46 @@ const extraKb = Markup.inlineKeyboard([
     [
         Markup.button.webApp("Студенческая жизнь", "https://priem.mauniver.ru/life/")
     ],
+]);
 
-])
+// Кнопки при вызове меню "Контакты"
+const degreeKb = Markup.inlineKeyboard([
+    [
+        Markup.button.callback("Высшее образование (ВО)", "University")
+    ],
+    [
+        Markup.button.callback("Среднее профессиональное образование (СПО)", "Vocational")
+    ]
+]);
+
+// Кнопки при нажатии в меню "Контакты" на "Высшее образование"
+const bachelorOfficesKb = Markup.inlineKeyboard([
+    [
+        Markup.button.callback("Мурманск, пр. Кирова, 1", "bachelorOffice1")
+    ],
+    [
+        Markup.button.callback("Мурманск, пр. Капитана Егорова, 16", "bachelorOffice2")
+    ],
+    [
+        Markup.button.callback("Апатиты, ул. Лесная, 29", "bachelorOffice3")
+    ]
+]);
+
+// Кнопки при нажатии в меню "Контакты" на "Среднее профессиональное образование"
+const vocationalOfficesKb = Markup.inlineKeyboard([
+    [
+        Markup.button.callback("Мурманск, ММРК им. И.И. Месяцева", "vocationalOffice1")
+    ],
+    [
+        Markup.button.callback("Мурманск, Колледж МАУ", "vocationalOffice2")
+    ],
+    [
+        Markup.button.callback("Филиал в городе Полярный", "vocationalOffice3")
+    ],
+    [
+        Markup.button.callback("Филиал в городе Кировск", "vocationalOffice4")
+    ]
+]);
 
 // Кнопки ниже ввода текста
 const mainKb = Markup.keyboard([
@@ -123,6 +161,9 @@ const mainKb = Markup.keyboard([
     ],
     [
         Markup.button.text("Что ещё важно")
+    ],
+    [
+        Markup.button.text("Контакты")
     ]
 ]);
 
@@ -134,3 +175,6 @@ module.exports.extraKb = extraKb;
 module.exports.declarationKb = declarationKb;
 module.exports.consertKb = consertKb;
 module.exports.examsKb = examsKb;
+module.exports.degreeKb = degreeKb;
+module.exports.bachelorOfficesKb = bachelorOfficesKb;
+module.exports.vocationalOfficesKb = vocationalOfficesKb;
