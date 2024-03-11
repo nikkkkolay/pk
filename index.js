@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 // Telegram-бот, выводящий полезную информацию через варианты меню: "Тест на профориентацию", "Полезная информация", "FAQ", "Калькулятор ЕГЭ".
 // Главный файл, с которого и начинается запуск бота
 
@@ -59,11 +60,18 @@ bot.hears("Что ещё важно", async (ctx) => {
         kb.extraKb
     );
 });
+bot.hears("Контакты", async (ctx) => {
+    await ctx.reply(
+        "Выберите уровень желаемого образования",
+        kb.degreeKb
+    );
+});
 
 //
 // ACTION
 //
 // Обработка нажатия кнопок и показываемого текста при взаимодействии с меню
+// TODO: refactor into switch case ig
 bot.action("Declaration", async (ctx) => {
     await ctx.editMessageText("Выберите уровень образования", kb.declarationKb);
 });
@@ -72,6 +80,34 @@ bot.action("Consert", async (ctx) => {
 });
 bot.action("Back to help", async (ctx) => {
     await ctx.editMessageText("Выберите интересующую вас тему", kb.helpKb);
+});
+bot.action("University", async (ctx) => {
+    await ctx.editMessageText("Выберите офис", kb.bachelorOfficesKb);
+});
+bot.action("Vocational", async (ctx) => {
+    await ctx.editMessageText("Выберите офис", kb.vocationalOfficesKb);
+});
+// Секнция ответов на кнопку "Контакты"
+bot.action("bachelorOffice1", async (ctx) => {
+    await ctx.replyWithMarkdownV2(rate.returnAddress("bachelorOffice1"));
+});
+bot.action("bachelorOffice2", async (ctx) => {
+    await ctx.replyWithMarkdownV2(rate.returnAddress("bachelorOffice2"));
+});
+bot.action("bachelorOffice3", async (ctx) => {
+    await ctx.replyWithMarkdownV2(rate.returnAddress("bachelorOffice3"));
+});
+bot.action("vocationalOffice1", async (ctx) => {
+    await ctx.replyWithMarkdownV2(rate.returnAddress("vocationalOffice1"));
+});
+bot.action("vocationalOffice2", async (ctx) => {
+    await ctx.replyWithMarkdownV2(rate.returnAddress("vocationalOffice2"));
+});
+bot.action("vocationalOffice3", async (ctx) => {
+    await ctx.replyWithMarkdownV2(rate.returnAddress("vocationalOffice3"));
+});
+bot.action("vocationalOffice4", async (ctx) => {
+    await ctx.replyWithMarkdownV2(rate.returnAddress("vocationalOffice4"));
 });
 
 //
