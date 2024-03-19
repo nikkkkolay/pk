@@ -4,29 +4,37 @@
 
 Бот помогает абитуриентам найти информацию для поступления в ВУЗ, найти контакты приемной комиссии и ответить на часто задаваемые вопросы.
 
-# Клонировать проект
+## Клонировать проект
 
-git clone git@github.com:nikkkkolay/pk.git - если команда выдаёт ошибку, просит логин и пароль от аккаунта GitHub, то вот [решение](https://www.youtube.com/watch?v=8X4u9sca3Io)
+```sh
+git clone git@github.com:nikkkkolay/pk.git
 
 cd pk
 
 git checkout -b <имя ветки>
+```
 
 После сделанных измнений:
 
+```sh
 git push --set-upstream origin <имя ветки>
+```
 
-# Запустить бота
+## Запустить бота
 
 Загрузить пакеты:
 
+```sh
 npm install
+```
 
 Старт проекта:
 
+```sh
 npm run start
+```
 
-# Технологии
+## Технологии
 
 1. [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 2. [NodeJS](https://nodejs.org/en/)
