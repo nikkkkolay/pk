@@ -1,12 +1,12 @@
 {
-    "name": "priem_bot",
+    "name": "pk",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
         "start": "nodemon index.js",
         "lint": "eslint --fix --ext .js, ."
     },
-    "author": "MASU",
+    "author": "MAU",
     "license": "ISC",
     "dependencies": {
         "sqlite3": "^5.1.7",
